@@ -1,0 +1,39 @@
+﻿@page
+@model SleeperLeagueModel
+@{
+	ViewData["Title"] = "Sleeper Leagues";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.SleeperLeagues[0].Name)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.SleeperLeagues[0].Sport)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.SleeperLeagues[0].LeagueSize)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.SleeperLeagues)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Name)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Sport)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.LeagueSize)
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
